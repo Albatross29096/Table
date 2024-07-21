@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: separate; /* Separate borders for cells */
+    border-spacing: 10px; /*  space between cells */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners for table */
+    overflow: hidden; /* Ensure shadows do not extend beyond table */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Positioning for shadow */
+}
+
+/* Different color on ID (first column) and first row */
+.head{
+    background-color: rgb(200, 207, 233);
+    color: blue;
+    text-decoration: underline;
+    height: 60px;
+    
+    
+}
+.id{
+    color: darkred;
+    background-color: rgb(202, 147, 147);
+}
+tr{
+    color: yellowgreen;
+    background-color: rgb(233, 236, 191);
+}
+
+/* Hover effect on cells */
+tr:hover{
+    color: rgb(216, 156, 46);
+    transform: translateY(-5px);
+    background-color: #333;
+}
+/* 3D effect using box-shadow */
+th, td {
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.8) inset, 0 -2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+
+td:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1));
+    pointer-events: none; /* Allow mouse events to pass through */
+    z-index: -1; /* Behind the content */
+}
+td {
+    transition: background-color 0.3s, color 0.3s;
+}
